@@ -13,25 +13,79 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Splash Screen -->
+    <!-- Professional Splash Screen - Developed by Nitai Studio - Made in India -->
     <div id="splashScreen" class="splash-screen">
+        <!-- Background Particles -->
+        <div class="splash-particles" id="splashParticles"></div>
+        
+        <!-- Gradient Orbs -->
+        <div class="splash-orb orb-1"></div>
+        <div class="splash-orb orb-2"></div>
+        <div class="splash-orb orb-3"></div>
+        
+        <!-- Main Content -->
         <div class="splash-content">
-            <div class="splash-icon">
-                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                    <rect width="80" height="80" rx="20" fill="url(#gradient)"/>
-                    <path d="M25 55V25L55 40L25 55Z" fill="white"/>
-                    <defs>
-                        <linearGradient id="gradient" x1="0" y1="0" x2="80" y2="80">
-                            <stop offset="0%" stop-color="#6C63FF"/>
-                            <stop offset="100%" stop-color="#3F8CFF"/>
-                        </linearGradient>
-                    </defs>
-                </svg>
+            <!-- Logo Container -->
+            <div class="splash-logo-wrapper">
+                <div class="splash-logo-ring"></div>
+                <div class="splash-logo">
+                    <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
+                        <!-- Rotating Outer Ring -->
+                        <circle cx="45" cy="45" r="42" stroke="url(#ringGradient)" stroke-width="2.5" stroke-dasharray="60 200" stroke-linecap="round">
+                            <animateTransform attributeName="transform" type="rotate" from="0 45 45" to="360 45 45" dur="8s" repeatCount="indefinite"/>
+                        </circle>
+                        <!-- Icon Background -->
+                        <rect x="15" y="15" width="60" height="60" rx="18" fill="url(#iconGradient)"/>
+                        <!-- Play Button -->
+                        <path d="M32 28v34l30-17-30-17z" fill="white"/>
+                        <!-- Sparkle -->
+                        <circle cx="65" cy="25" r="3" fill="#FFD700">
+                            <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <defs>
+                            <linearGradient id="ringGradient" x1="0" y1="0" x2="90" y2="90">
+                                <stop offset="0%" stop-color="#6C63FF"/>
+                                <stop offset="50%" stop-color="#FF6B6B"/>
+                                <stop offset="100%" stop-color="#3F8CFF"/>
+                            </linearGradient>
+                            <linearGradient id="iconGradient" x1="15" y1="15" x2="75" y2="75">
+                                <stop offset="0%" stop-color="#6C63FF"/>
+                                <stop offset="100%" stop-color="#3F8CFF"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
             </div>
-            <h1 class="splash-title">WallFlare</h1>
-            <p class="splash-subtitle">4K Wallpapers</p>
-            <div class="loading-dots">
-                <span></span><span></span><span></span>
+            
+            <!-- App Name -->
+            <h1 class="splash-title">
+                <span class="title-gradient">WallFlare</span>
+            </h1>
+            <p class="splash-subtitle">Premium 4K Wallpapers</p>
+            
+            <!-- Loading Bar -->
+            <div class="splash-loader">
+                <div class="splash-loader-bar">
+                    <div class="splash-loader-progress" id="splashProgress"></div>
+                </div>
+            </div>
+            
+            <!-- Developer Credit -->
+            <div class="splash-credit">
+                <div class="credit-divider">
+                    <span>Developed by</span>
+                </div>
+                <p class="credit-studio">Nitai Studio</p>
+                <div class="made-in-india">
+                    <span class="india-flag">
+                        <span class="flag-saffron"></span>
+                        <span class="flag-white">
+                            <span class="ashoka-chakra">✱</span>
+                        </span>
+                        <span class="flag-green"></span>
+                    </span>
+                    <span class="made-in-text">Made in India 🇮🇳</span>
+                </div>
             </div>
         </div>
     </div>
